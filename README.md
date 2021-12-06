@@ -1,93 +1,172 @@
-# laravelTranslationJoeDixon
+<div align="center">
+  
+![Laravel Translation](logo.png)
+  
+Translation management for your Laravel application.
 
-JoeDixon for php 8 
+![Laravel Translation UI](translation.png)
 
-## Getting started
+![Travis (.org) branch](https://img.shields.io/travis/joedixon/laravel-translation/master.svg?style=for-the-badge)
+![Scrutinizer](https://img.shields.io/scrutinizer/g/joedixon/laravel-translation.svg?style=for-the-badge)
+![Scrutinizer Coverage](https://img.shields.io/scrutinizer/coverage/g/joedixon/laravel-translation.svg?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/joedixon/laravel-translation.svg?style=for-the-badge)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+</div>
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+------
 
-## Add your files
+## About Laravel Translation
 
-- [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Laravel Translation is a package for Laravel 5 which allows you full control
+over your translations when using [Laravel's
+localization](https://laravel.com/docs/5.7/localization) functionality.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/ivan8888/laraveltranslationjoedixon.git
-git branch -M main
-git push -uf origin main
-```
+The package allows you to manage your translations using either the native file
+based translations, but also provides a database driver which is useful in
+multi-server setups.
 
-## Integrate with your tools
+It exposes a user interface allowing you to update existing and add new
+translations to your application.
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://gitlab.com/ivan8888/laraveltranslationjoedixon/-/settings/integrations)
+Below are a full list of features:
 
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://gitlab.com/-/experiment/new_project_readme_content:052235bb85ab15414adf335aee405738?https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+- File and database drivers
+- Database translation loader (automatically load translations from the database
+  when Laravel's translation retrieval methods and the database driver)
+- User interface to add new languages and add and update translations
+- Artisan commands to manage your translations
+- Scan your application for missing translations
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+
+Install the package via Composer
+
+`composer require joedixon/laravel-translation`
+
+Publish configuration and assets
+
+`php artisan vendor:publish --provider="JoeDixon\Translation\TranslationServiceProvider"`
+
+The service provider is loaded automatically using [package discovery](https://laravel.com/docs/5.7/packages#package-discovery).
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### Configuration
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+The package ships with a configuration file called `translation.php` which is published to the
+config directory during installation. Below is an outline of the settings.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+```
+driver [file|database]
+```
+Choose either `file` or `database`. File translations utilise Laravel's native
+file based translations and includes support for both `array` based and `json` based
+language files.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+```
+route_group_config.middleware [string|array]
+```
+Apply middleware to the routes which ship with the package. For example, you may
+which to use the `auth` middleware to ensure package user interface is only
+accessible to logged in users.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+```
+translation_methods [array]
+```
+Choose which of Laravel's translation methods to use when searching for missing
+translation keys.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+```
+scan_paths [array]
+```
+Choose which paths to use when searching for missing translations. Narrowing the
+search to specific directories will result in a performance increase when
+scanning for missing translations. 
 
-## License
-For open source projects, say how it is licensed.
+```
+ui_url [string]
+```
+Choose the root URL where the package user interface can be accessed. All routes
+will be prefixed by this value.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+e.g. setting this value to `languages` will result in URLs such as `translations/{language}/translations`
+
+```
+database.languages_table
+```
+Choose the name of the languages table when using the database driver.
+
+```
+database.translations_table
+```
+Choose the name of the translations table when using the database driver.
+
+### Drivers
+
+#### File
+Utitlises Laravel's native php array and JSON based language files and exposes a
+user interface to manage the enclosed translations. Add and update languages and translations
+using either the user interface or the built-in [Artisan commands](https://laravel.com/docs/5.7/artisan).
+
+#### Database
+The database driver takes all of the functionality of Laravel's file based
+language files, but moves the storage to the database, utilising the connection
+configured for your Laravel application.
+
+It also replaces the translation loader in the container so all of Laravel's
+translation retrieval methods (`__()`, `trans()`, `@lang()`, etc) will load the
+relevant strings from the database rather than the files without the need to
+change any code in your application. It's a like for like swap.
+
+To utilise the database driver, make sure to update the database table names in
+the configuration file and run the migrations.
+
+### User interface
+Navigate to http://your-project.test/languages (update `languages` to match the
+`translation.ui_url` configuration setting) and use the interface to manage
+your translations.
+
+First, click on the language you wish to edit. On the subsequent page, find the
+translation you want to edit and click on the pencil icon or on the text and
+make your edits. As soon as you remove focus from the input, your translation
+will be saved, indicated by the green check icon.
+
+### Artisan Commands
+The package ships with a series of Artisan commands which assist with
+translation management.
+
+```
+translation:add-language
+```                  
+Add a new language to the application.
+  
+```
+translation:add-translation-key
+```            
+Add a new language key for the application.
+  
+```
+translation:list-languages
+```
+List all of the available languages in the application.
+  
+```
+translation:list-missing-translation-keys
+```
+List all of the translation keys in the app which don't have a corresponding translation.
+  
+```
+translation:sync-translations
+```             
+Synchronise translations between drivers. This is useful if you have an exisitng
+application using the native file based language files and wish to move to the
+database driver. Running this command will take all of the translations from the
+language files and insert them in to the database.
+
+```
+translation:sync-missing-translation-keys
+```
+This command will scan your project (using the paths supplied in the
+configuration file) and create all of the missing translation keys. This can be
+run for all languages or a single language.
 
